@@ -1,0 +1,30 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <section>
+        <h2 class="display-6 fw-bolder">Ingresar Nuevo Estudiante</h2>
+        <article class="row form-px">
+        
+            <form action="" method="POST" class="col col-sm-12 col-lg-6 form-rg ">{% csrf_token %}
+    
+                <div class="form-list">
+                    {{ miFormulario.as_p}}
+                </div>
+    
+                {% if miForm.errors %}
+                <p class="text-danger fw-bolder">Por favor ingrese datos validos.</p>
+                {% endif %}
+    
+                <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    
+            </form>
+    
+        </article>
+    </section>
+
+{% endblock %}
+
+

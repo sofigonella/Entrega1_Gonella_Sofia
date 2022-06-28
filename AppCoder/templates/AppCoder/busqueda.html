@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h1 class="display-4 fw-bolder text-center"> Busquedas </h1>
+
+<form action="/AppCoder/buscar" method="GET" class="container p-5 bg-alto">
+    
+    <h2>Buscar Estudiante</h2>
+    <input type="text" name="nombre">
+    <input type="submit" value="Buscar">
+</form>
+
+<div>
+    {% if estudiantes %}
+    <ul>
+        {% for estudiante in estudiantes %}
+            <li> {{estudiante.nombre}} {{estudiante.apellido}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+</div>
+
+
+{% endblock %}
