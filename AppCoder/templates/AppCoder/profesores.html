@@ -4,27 +4,25 @@
 
 {% block contenidoQueCambia %}
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-
-    <section>
-        <h2 class="display-6 fw-bolder">Ingresar Profesor</h2>
-        <article class="row form-px">
+    <div> 
+        <h1>Listado de Profesores del GIITNI</h1>
         
-            <form action="" method="POST" class="col col-sm-12 col-lg-6 form-rg ">{% csrf_token %}
+            {% if profesores %}
+
+                {% for p in profesores %}
+                
+                    <li> {{p.nombre}} {{p.apellido}}</li>
+                {% endfor %}
+
+            {% endif %}
+        <br>
+        
+    </div>
     
-                <div class="form-list">
-                    {{ miFormulario.as_p}}
-                </div>
-    
-                {% if miForm.errors %}
-                <p class="text-danger fw-bolder">Por favor ingrese datos validos.</p>
-                {% endif %}
-    
-                <button type="submit" class="btn btn-primary mt-3">Enviar</button>
-    
-            </form>
-    
-        </article>
-    </section>
+    <h1>Ingresar Nuevo Profesor</h1>    
+
+    <button type="button" class="btn btn-dark"><a href="crearProfesor">Ingresar</a></button>
+
 
 {% endblock %}
 

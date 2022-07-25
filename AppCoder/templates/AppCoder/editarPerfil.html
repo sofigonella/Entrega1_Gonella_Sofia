@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div>
+
+    <div class="text-center">
+        <h2>EDITAR USUARIO</h2>
+        <form action="" method="POST">{%csrf_token%}
+            
+            {{miFormulario.as_table}}
+    
+           <button type="submit">Realizar Cambio</button>
+        </form>   
+    </div>        
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{%load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Estudiantes del GIITNI</h1>
+
+    <ul>
+        {% for estudiante in object_list %}
+        <li>
+            <h5>NOMBRE: {{estudiante.nombre}}</h5>
+            <h5>
+                <a href="{% url 'Detail' estudiante.id %}">Ver</a>
+                <a href="{% url 'Edit' estudiante.id %}">Editar</a>
+                <a href="{% url 'Delete' estudiante.id %}">Borrar</a>
+            </h5>
+        </li>
+        {% endfor %}
+    </ul>
+    <!--<button><a href=""></a></button>-->
+
+{% endblock %}
+
+
+
+
+
+

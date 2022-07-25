@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+
+<h1 class="text-center my-3"><u>ACERCA DE MI:</u></h1>
+    
+<div class="text-center">
+    <h2> Me llamo Maria Sofia Gonella </h2>
+    <img src="{% static 'AppCoder/assets/img/fotoSofia.jpeg' %}" class="foto">
+
+    <h2>Estudio Ing. En Sistemas de Informacion en Tucuman, Argentina
+        <br/>Tengo 23 años
+        <br/>No tenia ningun conocimiento ni en python, ni Django   
+    </h2>
+</div>
+
+{% endblock %}
+
+

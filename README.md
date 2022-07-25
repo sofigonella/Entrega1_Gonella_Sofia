@@ -1,6 +1,10 @@
-# Entrega1_Gonella_Sofia
-Primera entrega del proyecto de página web programado con Python y utilizando framework django.
+# Entrega_Final_Gonella_Sofia
+Entrega final del proyecto de página web programado con Python y utilizando framework django.
+Realizado todo unicamente por Gonella Sofia 
 
+## Video
+Link de Video demostrativo de la APP
+- [@Video] (https://drive.google.com/file/d/1fPRNB5ejDR7Tuvwt0X2PBay6RJl-qWhm/view?usp=sharing)
 ## Documentacion
 Creacion de projecto django (python -m django startproject nombredelproyecto)
 Creacion de app django (python -m django startapp App)

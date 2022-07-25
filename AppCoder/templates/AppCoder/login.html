@@ -1,0 +1,30 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<head>
+    <link href="{% static 'AppCoder/css/login.css' %}" rel="stylesheet" />
+</head>
+
+<div>
+
+    <div class="text-center">
+        <h2>INICIO DE SESION</h2>
+        <form action="" method="POST">{%csrf_token%}
+            
+            {{form.as_p}}
+    
+           <button type="submit">Iniciar Sesión</button>
+           <button><a href="register">Registrarse.</a></button>
+           
+        </form>   
+    </div>        
+</div>
+
+
+
+
+
+{% endblock %}

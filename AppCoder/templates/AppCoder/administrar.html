@@ -1,0 +1,25 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<div class="text-center">
+    <h1> ADMINISTRAR</h1>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-dark"><a href="estudiante/list">Estudiantes</a></button>
+    
+        <br>
+        <button type="button" class="btn btn-dark"><a href="leerProfesores">Profesores</a></button>
+        
+        <br>
+        <button type="button" class="btn btn-dark"><a href="{% url 'editarPerfil' %}">Editar Perfil</a></button>
+
+        <!--<br>
+        <button type="button" class="btn btn-dark"><a href="{% url 'logout' %}">Salir</a></button> -->
+        
+        
+    </div>
+</div>
+
+{% endblock %}
